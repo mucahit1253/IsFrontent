@@ -140,5 +140,19 @@
    * Initiate Pure Counter
    */
   new PureCounter();
+  
+ const fab = document.querySelector(".fab");
+  const options = document.querySelector(".fab-options");
+
+  // Masaüstü: hover aç kapa
+  fab.addEventListener("mouseenter", () => options.classList.add("show"));
+  fab.addEventListener("mouseleave", () => options.classList.remove("show"));
+  options.addEventListener("mouseleave", () => options.classList.remove("show"));
+
+  // Mobil: tıklayınca aç kapa
+  fab.addEventListener("click", () => {
+    options.classList.toggle("show");
+  });
+
 
 })();
